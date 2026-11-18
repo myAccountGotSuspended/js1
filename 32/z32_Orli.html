@@ -2,23 +2,27 @@
 
 <head>
     <script type="text/javascript">
-        function owoc(nazwa_k, kolor_k, smak_k)//początek konstruktora
+        function owoc(smak_k, kolor_k, nazwa_k)
         {
             this.smak = smak_k;            
             this.kolor = kolor_k;
             this.nazwa = nazwa_k;
-        }//koniec konstruktora
-        owoc.prototype.wypisz = function () //definicja metody
+        }
+
+        owoc.prototype.owoc_wypisz_orlinski = function () 
         {
             alert(this.nazwa + ' ' + this.kolor + ' ' + this.smak);
         };
-        var owoc1 = new owoc("słodkie ","żółte", "mango"); // nowy obiekt osoba1
+        var owoc1 = new owoc("słodki ","żółty", "mango"); 
         var owoc2 = new owoc('gorzki', 'czerwony', 'granat');
-        owoc1.wypisz(); // uruchomienie metody wypisz() dotyczącej osoby 1
-        owoc2.wypisz();
+        owoc1.owoc_wypisz_orlinski(); 
+        owoc2.krajPochodzenia = 'Brazylia';
+        owoc2.owoc_pokaz_orlinski = function () { 
+            alert(this.nazwa + ' ' + this.kolor + ' ' + this.smak+ ' '+ this.krajPochodzenia);
+        };
         document.write("dostęp do właściwości" + "<br>");
-        // poniżej dostęp do pól osoby1
-        document.write("owoc pierwszy" + " " + owoc1.smak + " " + owoc1.kolor + " " + owoc1.nazwa);
+        document.write("owoc pierwszy: " + "<br>Smak: " + owoc1.smak + "<br>Kolor: " + owoc1.kolor + "<br>Nazwa: " + owoc1.nazwa);
+        document.write("<br>owoc drugi: " + "<br>Smak: " + owoc2.smak + "<br>Kolor: " + owoc2.kolor + "<br>Nazwa: " + owoc2.nazwa+"<br>Kraj pochodzenia: "+owoc2.krajPochodzenia);
     </script>
 </head>
 

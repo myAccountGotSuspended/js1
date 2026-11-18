@@ -73,23 +73,65 @@ var osoba_1 =
             <li>
                 Znaczenie słowa <b>this.</b> Jak oddzielamy pola oraz metody?
             </h1>
-            Słowo kluczowe this -> pozwala odwołać się do pola lub metody obiektu z wnętrza tego obiektu.
+            Słowo kluczowe this -> pozwala odwołać się do pola lub metody obiektu z wnętrza tego obiektu.<br>
+            Metody i pola muszą być odzielne przecinkami w obrębie jednego obiektu.
         </li>
         <h1>
             <li>
                 Konstruktor w JS na podstawie przykładu wraz z opisem.
             </h1>
+            <textarea>
+function klient(nazwisko_k,imie_k,zawod_k) 
+{ 
+ this.nazwisko=nazwisko_k; 
+ this.imie=imie_k; 
+ this.zawod=zawod_k; 
+  
+wypisz = function () 
+  { 
+    alert(this.nazwisko + ' ' + this.imie) 
+  } 
+}
+            </textarea>
+            Zostanie utworzony konstruktor o nazwie klient z właściwościami nazwisko, imie, zawod oraz 
+            metodą wypisz(). Właściwościom obiektu zostały przypisane wartości parametrów. Użyte słowo 
+            kluczowe this odnosi się do aktualnego obiektu i pozwala na przypisanie wartości parametru do 
+            odpowiedniego pola tego obiektu. 
         </li>
         <h1>
             <li>
                 Znaczenie słowa kluczowego New wraz z przykładem
             </h1>
+            Do utworzenia nowego obiektu na podstawie konstruktora stosowane jest słowo kluczowe new. 
+            <br>Np.<br>
+            var osoba1 = new klient('Kowalski', 'Jan', 'kierowca');<br>
+            var osoba2 = new klient('Nowak', 'Anna', 'sekretarka'); 
         </li>
         <h1>
             <li>
                 Znaczenie słowa kluczowego prototype wraz z przykładem i opisem ( szczególnie ważny
                 tekst pogrubiony).
             </h1>
+            <textarea>
+function klient() 
+{ 
+ this.nazwisko='Bielski'; 
+ this.imie='Paweł'; 
+ } 
+klient.prototype.pisz_dane = function () 
+   { 
+     document.write(this.nazwisko + ' ' + this.imie) 
+    } 
+klient.prototype.zawod = 'kierowca'; 
+var osoba1 = new klient(); 
+osoba1.pisz_dane();
+            </textarea>
+            W definicji konstruktora nie zostały zadeklarowane żadne metody i właściwości. Dopiero po użyciu 
+            właściwości prototype została dodana metoda pisz_dane oraz właściwość zawod. Od tej pory każdy 
+            nowo tworzony obiekt na podstawie konstruktora klient będzie posiadał tę dodatkową właściwość i 
+            metodę.<br>  
+            <b>Właściwość prototype może być również wykorzystana do dodawania dodatkowych 
+            metod lub właściwości do istniejących obiektów.</b> 
         </li>
         
         </ol>
