@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <style>
+        p {
+            background-color: silver;
+            border:double 4px gray;
+            height: auto;
+            width: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <p contenteditable="false">
+&lt;!DOCTYPE html&gt;<br>
+
+&lt;head&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;script type="text/javascript"&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    function okno_zamknij() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        window.close()<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    }<br><br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/script&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;style>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body {
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: green;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-size: 31;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/style>
+&lt;/head&gt;<br><br>
+
+&lt;body&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;script language="JavaScript"&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var D1_orl = prompt("Podaj pierwszy dzień w styczniu(większy od następnego)", "");<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var D2_orl = prompt("Podaj drugi dzień w styczniu(mniejszy od poprzedn)", "");<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var suma = 24 * 60 * 60 * (parseInt(D1_orl) - parseInt(D2_orl));<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.write("Ilość sekund pomiedzy tymi dniami wynosi " + suma + "&lt;br>");<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/script&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="button" value="zamknij okno" onclick="okno_zamknij()" /><br>
+&lt;/body&gt;<br><br>
+
+&lt;/html&gt;
+    </p>
+</body>
+
+</html>

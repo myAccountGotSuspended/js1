@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function owoc(nazwa_k, kolor_k, smak_k)//początek konstruktora
+        {
+            this.smak = smak_k;            
+            this.kolor = kolor_k;
+            this.nazwa = nazwa_k;
+        }//koniec konstruktora
+        owoc.prototype.wypisz = function () //definicja metody
+        {
+            alert(this.nazwa + ' ' + this.kolor + ' ' + this.smak);
+        };
+        var owoc1 = new owoc("słodkie ","żółte", "mango"); // nowy obiekt osoba1
+        var owoc2 = new owoc('gorzki', 'czerwony', 'granat');
+        owoc1.wypisz(); // uruchomienie metody wypisz() dotyczącej osoby 1
+        owoc2.wypisz();
+        document.write("dostęp do właściwości" + "<br>");
+        // poniżej dostęp do pól osoby1
+        document.write("owoc pierwszy" + " " + owoc1.smak + " " + owoc1.kolor + " " + owoc1.nazwa);
+    </script>
+</head>
+
+<body>
+    <br>
+    programowanie obiektowe
+</body>
+
+</html>

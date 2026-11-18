@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<head>
+    <script type="text/javascript">
+        function okno_zamknij() {
+            window.close()
+        }
+
+    </script>
+    <style>
+        body {
+            color: green;
+            font-size: 31;
+        }
+    </style>
+</head>
+
+<body>
+    <script language="JavaScript">
+        var D1_orl = prompt("Podaj pierwszy dzień w styczniu(większy od następnego)", "");
+        var D2_orl = prompt("Podaj drugi dzień w styczniu(mniejszy od poprzedn)", "");
+        var suma = 24*60*60*(parseInt(D1_orl)-parseInt(D2_orl));
+        document.write("Ilość sekund pomiedzy tymi dniami wynosi " + suma + "<br>");
+    </script>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij()" />
+</body>
+
+</html>

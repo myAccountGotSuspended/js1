@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    
+</head>
+
+<body>
+    <textarea cols="150" rows="50" style="align-self: center;">
+<html>
+
+<head>
+    <script language="JavaScript">
+        function Drabina_orlinski(d_orl, x_orl) {
+            d_orl=parseFloat(d_orl)
+            x_orl=parseFloat(x_orl)
+            L_orl=(Math.sqrt(d_orl*d_orl+x_orl*x_orl))
+            document.getElementsByName('drabina')[0].value = L_orl.toFixed(2);
+            alert("Drabina=" + L_orl.toFixed(2));
+            pokaz1.innerHTML = "Drabina=" + L_orl.toFixed(2);
+
+        }
+        function Alfa_orlinski(d_orl, x_orl) {
+            d_orl=parseFloat(d_orl)
+            x_orl=parseFloat(x_orl)
+            L_orl=(Math.sqrt(d_orl*d_orl+x_orl*x_orl))
+            Alfa_orl=Math.asin(d_orl/L_orl)
+            Alfa_orl=(Alfa_orl/Math.PI)*180;
+            document.getElementsByName('alfa')[0].value = Alfa_orl.toFixed(2);
+            alert("Alfa=" + Alfa_orl.toFixed(2));
+            pokaz2.innerHTML = "Alfa=" + Alfa_orl.toFixed(2);
+
+        }
+    </script>
+</head>
+
+<body>
+    obliczanie odległości od drabiny i kąta
+    <br> <br>
+    <form name="formularz" action="..." onsubmit="Drabina_orlinski(this.d_dana_orl.value,this.x_dana_orl.value);
+    Alfa_orlinski(this.d_dana_orl.value,this.x_dana_orl.value);return false">
+        Podaj d=
+        <input size="6" name="d_dana_orl">
+        Podaj x=
+        <input size="6" name="x_dana_orl">
+        <br> <br>
+        <input TYPE="submit" Value="oblicz">
+        <br> <br>
+        Pole=
+        <input size="6" name="drabina">
+        Obwód=
+        <input size="6" name="alfa">
+    </form>
+    <table>
+        <tr id="pokaz1"></tr>
+        <tr id="pokaz2"></tr>
+    </table>
+</body>
+
+</html>
+    </textarea>
+</body>
+
+</html>

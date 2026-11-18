@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    
+</head>
+
+<body>
+    <textarea cols="150" rows="50" style="align-self: center;">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styl.css">
+</head>
+
+<body>
+    <script type="text/javascript">
+        function AB_orl() {
+            var Ax_orl = parseFloat(document.getElementById('Ax').value);
+            var Ay_orl = parseFloat(document.getElementById('Ay').value);
+            var Bx_orl = parseFloat(document.getElementById('Bx').value);
+            var By_orl = parseFloat(document.getElementById('By').value);
+            var wynik_orl = Math.sqrt(Math.pow(Ax_orl-Ay_orl, 2)+Math.pow(Bx_orl-By_orl, 2))
+            document.getElementById("nazwa").innerHTML = "Odległość między punktami A i B wynosi: " + wynik_orl.toFixed(2);
+        }
+        function BC_orl() {
+            var Cx_orl = parseFloat(document.getElementById('Cx').value);
+            var Cy_orl = parseFloat(document.getElementById('Cy').value);
+            var Bx_orl = parseFloat(document.getElementById('Bx').value);
+            var By_orl = parseFloat(document.getElementById('By').value);
+            var wynik_orl = Math.sqrt(Math.pow(Bx_orl-By_orl, 2)+Math.pow(Cx_orl-Cy_orl, 2))
+            document.getElementById("nazwa").innerHTML = "Odległość między punktami B i C wynosi: " + wynik_orl.toFixed(2);
+        }
+        function AC_orl() {
+            var Ax_orl = parseFloat(document.getElementById('Ax').value);
+            var Ay_orl = parseFloat(document.getElementById('Ay').value);
+            var Cx_orl = parseFloat(document.getElementById('Cx').value);
+            var Cy_orl = parseFloat(document.getElementById('Cy').value);
+            var wynik_orl = Math.sqrt(Math.pow(Ax_orl-Ay_orl, 2)+Math.pow(Cx_orl-Cy_orl, 2))
+            document.getElementById("nazwa").innerHTML = "Odległość między punktami A i C wynosi: " + wynik_orl.toFixed(2);
+        }
+
+    </script>
+    Podaj Ax: <input type="text" id="Ax" value="podaj punkt"><br>
+    Podaj Ay: <input type="text" id="Ay" value="podaj punkt"><br>
+    Podaj Bx: <input type="text" id="Bx" value="podaj punkt"><br>
+    Podaj By: <input type="text" id="By" value="podaj punkt"><br>
+    Podaj Cx: <input type="text" id="Cx" value="podaj punkt"><br>
+    Podaj Cy: <input type="text" id="Cy" value="podaj punkt"><br><br><br>
+    <input type="button" value="Oblicz odległość AB" Onclick="AB_orl()"><br><br>
+    <input type="button" value="Oblicz odległość BC" Onclick="BC_orl()"><br><br>
+    <input type="button" value="Oblicz odległość AC" Onclick="AC_orl()"><br><br>
+    <div style="color:red;font-size:50px;" id="nazwa"></div>
+</body>
+
+</html>
+    </textarea>
+</body>
+
+</html>

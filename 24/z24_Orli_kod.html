@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    
+</head>
+
+<body>
+    <textarea cols="150" rows="50" style="align-self: center;">
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            var x1_orl = parseFloat(prompt("x1=", ""))
+            var x2_orl = parseFloat(prompt("x2=", ""))
+            var x1_orl_rad = (Math.PI*x1_orl)/180;
+            var x2_orl_rad = (Math.PI*x2_orl)/180;
+
+            var y1 = (3* Math.pow(x1_orl, (6/8)))
+            var y2 = (2*Math.cos(x1_orl_rad)+3*Math.sin(x1_orl_rad)) 
+            var y3 = Math.cbrt(Math.pow(x1_orl, 5)+2*Math.pow(x2_orl, 4)*(x1_orl-x2_orl))*(x1_orl-x2_orl)
+            
+            
+            document.write("x1="+x1_orl+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x2="+x2_orl)
+            document.write("<br>x1="+x1_orl+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x1="+x1_orl_rad.toFixed(2))
+            document.write("<br>y1="+y1.toFixed(2))
+            document.write("<br>y2="+y2.toFixed(2))
+            document.write("<br>y3="+y3.toFixed(2))
+        </script>
+    </body>
+</html>
+    </textarea>
+</body>
+
+</html>

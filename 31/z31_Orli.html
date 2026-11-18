@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        var owoc = {
+            nazwa: 'Jabłko',
+            kolor: 'Zielony',
+            smak: 'Słodki',
+            pokaz: function () {
+                document.write(this.nazwa + ' ' +'koloru '+ this.kolor+' o smaku '+this.smak)
+            }
+        }
+        owoc.pokaz();
+        owoc.krajPochodzenia = 'Brazylia';
+        owoc.owoc_wypisz_orlinski = function () { alert('Kraj pochodzenia: ' + this.krajPochodzenia) }
+        owoc.wypisz();
+    </script>
+</head>
+
+<body>
+    <br>
+    Programowanie obiektowe. <br>
+    Obiekt to owoc<br>
+    Pola:<br>
+    Nazwisko<br>
+    imie<br>
+    zawod<br>
+    metoda: pokaz();<br>
+    nowe pole to wiek <br>
+    nowa metoda to owoc_wypisz_orlinski();<br>
+</body>
+
+</html>
