@@ -1,6 +1,11 @@
 <html>
     <head>
-
+        <style>
+            body{
+                color: blue;
+                font-size: 2cm;
+            }
+        </style>
     </head>
     <body>
         <script>
@@ -10,7 +15,11 @@
 
             var lambda_orl = Math.log(2)/T1na2_orl
             var N_orl = powN0_orl* Math.pow(Math.E,-lambda_orl*t_orl)
-            
+            document.write("N0="+N0_orl+"[sztuk]")
+            document.write("t="+t_orl+"[lat]")
+            document.write("T1/2="+T1na2_orl+"[lat]")
+            document.write("Lambda="+lambda_orl.toFixed(7)+"[1/rok]")
+            document.write("N="+N_orl.toFixed(2)+"[sztuk]")
         </script>
     </body>
 </html>
